@@ -1,6 +1,6 @@
 const { fastify } = require("fastify");
 
-const server = fastify({ logger: true });
+const server = fastify({ logger: true, trustProxy: true });
 
 server.get("/ip", {}, (req, reply) => {
 	const clientIp = req.ip;
